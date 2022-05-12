@@ -1,0 +1,33 @@
+﻿@model Country
+
+<h3>@Model.Name</h3>
+<img src="@Model.Flag" alt="@Model.Name flag" />
+<iframe
+  width="450"
+  height="250"
+  frameborder="0" style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyAbdbhH3D7PhN-y2NRnnJED-2uZiJ_uR1Y&q={@Model.Name}"
+  allowfullscreen>
+</iframe>
+<table class = "table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Region</th>
+        <th>Population</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>@Model.Id</td>
+        <td>@Model.Name</td>
+        <td>@Model.Region</td>
+        <td>@Model.Population</td>
+        <td>
+            <div>
+                <a asp-controller="CountryWant" asp-action="Add" asp-route-Id="@Model.Id">Add to Travel List</a>
+            </div>
+        </td>
+    </tr>
+    
+</table>

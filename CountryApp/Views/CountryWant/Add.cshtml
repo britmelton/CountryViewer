@@ -1,0 +1,45 @@
+﻿@model CountryWant
+
+<form method="post">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Region</th>
+        </tr>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            <td>@Model.Region</td>
+        </tr>
+    </table>
+    <button type="submit">Add</button>
+</form>
+
+
+
+@*<form method="post">
+    <div>
+        <h2>Add Country to Travel List</h2>
+    </div>
+    <div>
+        <label asp-for="Id"></label>
+        <input asp-for="Id" value="fd" class="form-control" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Region"></label>
+        <input asp-for="Region" class="form-control" />
+        <span asp-validation-for="Region" class="text-danger"></span>
+    </div>
+    <button type="submit">Add</button>
+    <a asp-controller="CountryWant" asp-action="Index">
+        Back to List
+    </a>
+</form>*@
+

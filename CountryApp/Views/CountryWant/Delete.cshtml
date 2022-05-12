@@ -1,0 +1,24 @@
+﻿@model CountryWant
+
+<form method="post" asp-action="DeletePOST">
+    <input asp-for="Id" hidden />
+    <div>
+        <h2>Delete Country</h2>
+    </div>
+    <div>
+        <label asp-for="Id"></label>
+        <input asp-for="Id" disabled class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" disabled class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Region"></label>
+        <input asp-for="Region" disabled class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-controller="CountryWant" asp-action="Index">
+        Back to List
+    </a>
+</form>

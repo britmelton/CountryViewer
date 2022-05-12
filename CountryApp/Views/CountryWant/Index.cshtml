@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CountryWant>
+<h2>Your Travel List</h2>
+<a asp-controller="CountryWant" asp-action="Add">
+    Add Country to Travel List
+</a>
+<table class ="table table-bordered table-striped" style="width:100%">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Region</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var country in Model)
+    {
+        <tr>
+            <td><a href=/Country/ViewCountry/@country.Id>@country.Id</a></td>
+            <td>@country.Name</td>
+            <td>@country.Region</td>
+            <td>
+                <div>
+                    <a asp-controller="CountryWant" asp-action="Edit" asp-route-id="@country.Id">Edit</a>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <a asp-controller="CountryWant" asp-action="Delete" asp-route-id="@country.Id">Delete</a>
+                </div>
+            </td>
+        </tr>
+    }
+</table>
